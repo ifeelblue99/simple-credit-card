@@ -1,0 +1,84 @@
+:root{
+    --card-bg: linear-gradient(
+        90deg,
+        #2E3035,
+        #3a3c41
+    );  --bg-color: #8a8a8a;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; text-decoration: none;
+    line-height: 1.3;
+}
+body{
+    background-color: var(--bg-color);
+}
+.card-container{
+    height: 100vh;
+    perspective: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    margin: 1rem;
+    border: 1.7px #3b3d42 solid;
+    color: rgb(102, 102, 102);
+    border-radius: 10px;
+    max-width: 250px;
+    width: 45%;
+    min-width: 220px;
+    padding-top: 60px;
+    padding-bottom: .5rem;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(7px);
+    background-image: var(--card-bg);
+    transition: all .3s linear;
+}
+.sub-info{
+    display: flex;
+    gap: 1rem;
+}
+#visa-img{
+    width: 7vw;
+    min-width: 40px;
+    max-width: 50px;
+    filter: drop-shadow(2px 2px 1px rgb(43, 43, 43));
+}
+/*bold*/
+.bold{
+    font-size: .7rem;
+    color: slategrey;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(43,43,43);
+}
+/*card num*/
+.card-num{
+    color: rgb(248, 248, 248);
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px rgb(43,43,43);
+}
+/* holder name and expire date */
+.card-expire-date,
+.card-holder-name{
+    font-size: .95rem;
+    text-shadow: 1px 1px 1px rgb(43,43,43);
+}
+#bg-image-card{
+    opacity: .2;
+    object-fit: cover;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+/*************** hover ******************/
+.card:hover{
+    transform: scale(1.2);
+}
